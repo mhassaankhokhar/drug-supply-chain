@@ -30,9 +30,9 @@ function App() {
 			}
 		} else {
 			if (context != null) {
-			const deployedNetwork = SupplyChainContract.networks[context.networkId];
+			const deployedNetwork = SupplyChainContractAbi.networks[context.networkId];
 				const supplychainInstance = new context.library.eth.Contract(
-					SupplyChainContract.abi,
+					SupplyChainContractAbi.abi,
 					deployedNetwork && deployedNetwork.address,
 				)
 				instance = supplychainInstance
